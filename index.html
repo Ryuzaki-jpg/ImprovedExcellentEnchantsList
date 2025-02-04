@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellent Enchants</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --header-color: #4a4a4a;
+            --table-header-bg: #2c2c2c;
+            --table-odd-row-bg: #262626;
+            --table-even-row-bg: #2a2a2a;
+            --table-border-color: #3a3a3a;
+            --accent-color: #8b5cf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: var(--accent-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--table-border-color);
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-even-row-bg);
+        }
+
+        tr:nth-child(odd) {
+            background-color: var(--table-odd-row-bg);
+        }
+
+        tr:hover {
+            background-color: var(--header-color);
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9f7aea;
+        }
+    </style>
+</head>
+<body>
+    <h1>💫 Excellent Enchants</h1>
+
+    <h2>Armor Enchantments</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Applies To</th>
+            <th>Conflicts With</th>
+            <th>Max Level</th>
+        </tr>
+        <tr>
+            <td>Aquaman</td>
+            <td>Grants Water Breathing effect.</td>
+            <td>Helmet</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Bunny Hop</td>
+            <td>Grants Jump Boost effect.</td>
+            <td>Boots</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Cold Steel</td>
+            <td>Applies Mining Fatigue effect to the attacker.</td>
+            <td>Chestplate</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Darkness Cloak</td>
+            <td>Applies Darkness effect to the attacker.</td>
+            <td>Chestplate</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Elemental Protection</td>
+            <td>Reduces Poison, Magic, Wither, Lightning, Freeze damage.</td>
+            <td>All Armor</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Flame Walker</td>
+            <td>Creates magma blocks when walking over lava, and causes the wearer to be immune to damage from magma blocks when stepped on.</td>
+            <td>Boots</td>
+            <td>Frost Walker</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Fire Shield</td>
+            <td>Like Thorns, but ignites the attacker.</td>
+            <td>Chestplate</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Ice Shield</td>
+            <td>Freezes and slows down the attacker.</td>
+            <td>Chestplate</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Hardened</td>
+            <td>Grants Damage Resistance effect on receiving damage.</td>
+            <td>Chestplate</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Night Vision</td>
+            <td>Grants Night Vision effect.</td>
+            <td>Helmet</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Rebound</td>
+            <td>Gives the effect of landing on a slime block.</td>
+            <td>Boots</td>
+            <td>Feather Falling</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Regrowth</td>
+            <td>Restores certain amount hearts over the time regardless of the food and saturation levels.</td>
+            <td>Chestplate</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Saturation</td>
+            <td>Restores certain amount of food and saturation over the time.</td>
+            <td>Helmet</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Self-Destruction</td>
+            <td>Creates an explosion on death.</td>
+            <td>Chestplate</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Sonic</td>
+            <td>Grants Speed effect.</td>
+            <td>Boots</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Stopping Force</td>
+            <td>Reduces knockback when getting damage.</td>
+            <td>Leggings</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Treasure Hunter</td>
+            <td>Chance to find more loot in loot chests of dungeons and structures.</td>
+            <td>Helmet</td>
+            <td>-</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <h2>Bow Enchantments</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Applies To</th>
+            <th>Conflicts With</th>
+            <th>Max Level</th>
+        </tr>
+        <tr>
+            <td>Bomber</td>
+            <td>Chance to launch TNT instead of an Arrow.</td>
+            <td>Bows, Crossbows</td>
+            <td>Power, Punch, Flame, Flare, Ender Bow, Ghast, (Arrow Effect Enchants)</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Ender Bow</td>
+            <td>Chance to launch an Ender Pearl instead of an Arrow.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ghast, Bomber, Flare</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Ghast</td>
+            <td>Chance to launch a Fireball instead of an Arrow.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Bomber, Flare</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Flare</td>
+            <td>Chance to create a torch where arrow land.</td>
+            <td>Bows, Crossbows</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Sniper</td>
+            <td>Increases projectile speed.</td>
+            <td>Bows, Crossbows</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Hover</td>
+            <td>Chance to launch an arrow with Levitation effect on hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Lingering</td>
+            <td>Makes tipped arrows generate a lingering effect when the arrow hits a block.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Confusing Arrows</td>
+            <td>Chance to launch an arrow with Nausea effect on hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Dragonfire Arrows</td>
+            <td>Chance to launch an arrow with Dragon Breath effect on hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Darkness Arrows</td>
+            <td>Chance to launch an arrow with Darkness effect on hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Electrified Arrows</td>
+            <td>Chance to launch an arrow with Lightning effect on hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Explosive Arrows</td>
+            <td>Chance to launch an arrow with Explosion effect on hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Poisoned Arrows</td>
+            <td>Chance to launch an arrow with Poison effect on hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Vampiric Arrows</td>
+            <td>Chance to restore health on arrow hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Withered Arrows</td>
+            <td>Chance to launch an arrow with Wither effect on hit.</td>
+            <td>Bows, Crossbows</td>
+            <td>Ender Bow, Ghast, Bomber</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <h2>Tool Enchantments</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Applies To</th>
+            <th>Conflicts With</th>
+            <th>Max Level</th>
+        </tr>
+        <tr>
+            <td>Blast Mining</td>
+            <td>Chance to create an explosion that mines all blocks in it's area.</td>
+            <td>Pickaxes</td>
+            <td>Tunnel, Veinminer</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Divine Touch</td>
+            <td>Chance to mine a Spawner with it's Entity Type.</td>
+            <td>Pickaxes</td>
+            <td>Smelter</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Haste</td>
+            <td>Chance to receive Haste effect on block break.</td>
+            <td>Tools</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Lucky Miner</td>
+            <td>Chance to receive more exp from mined blocks.</td>
+            <td>Pickaxes</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Replanter</td>
+            <td>Automatically replant crops on harvest or right-click.</td>
+            <td>Hoes</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Silk Chest</td>
+            <td>Chance to save all chest's content in the dropped item on break.</td>
+            <td>Axes</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Smelter</td>
+            <td>Chance to smelt dropped items into other materials.</td>
+            <td>Tools</td>
+            <td>Silk Touch, Divine Touch</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Telekinesis</td>
+            <td>Chance to move all block loot directly to your inventory.</td>
+            <td>Tools</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Tunnel</td>
+            <td>Chance to mine 1x2 area on level I, 2x2 on level II, 3x3 on level III.</td>
+            <td>Pickaxes, Shovels</td>
+            <td>Veinminer, Blast Mining</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Veinminer</td>
+            <td>Chance to mine the whole ore vein at once.</td>
+            <td>Pickaxes</td>
+            <td>Tunnel, Blast Mining</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <h2>Fishing Enchantments</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Applies To</th>
+            <th>Conflicts With</th>
+            <th>Max Level</th>
+        </tr>
+        <tr>
+            <td>Auto Reel</td>
+            <td>Automatically reels in a hook on bite.</td>
+            <td>Fishing Rod</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Double Catch</td>
+            <td>Increases amount of caught item by x2.</td>
+            <td>Fishing Rod</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Seasoned Angler</td>
+            <td>Increases amount of gained XP from fishing.</td>
+            <td>Fishing Rod</td>
+            <td>-</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Survivalist</td>
+            <td>Automatically cooks fish if what is caught is raw.</td>
+            <td>Fishing Rod</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>River Master</td>
+            <td>Increases casting distance.</td>
+            <td>Fishing Rod</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Curse of Drowned</td>
+            <td>Chance to fish up a Drowned Zombie.</td>
+            <td>Fishing Rod</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <h2>Weapon Enchantments</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Applies To</th>
+            <th>Conflicts With</th>
+            <th>Max Level</th>
+        </tr>
+        <tr>
+            <td>Bane of Netherspawn</td>
+            <td>Chance to inflict additional damage to nether mobs.</td>
+            <td>Swords, Axes</td>
+            <td>Sharpness, Bane of Arthropods, Smite, Village Defender</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Blindness</td>
+            <td>Chance to apply Blindness effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Confusion</td>
+            <td>Chance to apply Nausea effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Cure</td>
+            <td>Chance to cure Zombified Piglins and Zombie Villagers on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Curse of Death</td>
+            <td>If you kill a player, you have a chance of dying too.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Cutter</td>
+            <td>Chance to reduce durability and unequip enemy's armor on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Decapitator</td>
+            <td>Chance to drop enemy's head on kill.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Double Strike</td>
+            <td>Chance to inflict double damage.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Exhaust</td>
+            <td>Chance to apply Hunger effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Exp Hunter</td>
+            <td>Chance to receive more exp from mobs on kill.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Ice Aspect</td>
+            <td>Chance to apply Slowness effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Infernus</td>
+            <td>Chance to launch a flaming Trident.</td>
+            <td>Tridents</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Nimble</td>
+            <td>Chance to move all mob loot directly to your inventory on kill.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Paralyze</td>
+            <td>Chance to apply Mining Fatigue effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Rage</td>
+            <td>Chance to receive Strength effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Rocket</td>
+            <td>Chance to launch an enemy into the space on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Scavenger</td>
+            <td>Chance to get extra loot from mobs.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Surprise</td>
+            <td>Chance to apply Random effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Swiper</td>
+            <td>Chance to steal player's XP on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Temper</td>
+            <td>Chance to inflict more damage depends on how many hearts you lost.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Thrifty</td>
+            <td>Chance to receive mob Spawn Egg on kill.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Thunder</td>
+            <td>Chance to summon Lightning strike on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Vampire</td>
+            <td>Chance to regain health on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Venom</td>
+            <td>Chance to apply Poison effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Village Defender</td>
+            <td>Chance to inflict more damage to Pillagers.</td>
+            <td>Swords, Axes</td>
+            <td>Sharpness, Smite, Bane of Arthropods, Bane of Netherspawn</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Wither</td>
+            <td>Chance to apply Wither effect on hit.</td>
+            <td>Swords, Axes</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <h2>Universal Enchantments</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Applies To</th>
+            <th>Conflicts With</th>
+            <th>Max Level</th>
+        </tr>
+        <tr>
+            <td>Restore</td>
+            <td>When an item breaks it loses the enchant and the item is brought back to certain durability.</td>
+            <td>All Items</td>
+            <td>-</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Soulbound</td>
+            <td>Prevents item from being dropped upon death.</td>
+            <td>All Items</td>
+            <td>Curse of Vanishing</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Curse of Breaking</td>
+            <td>Chance to take extra item durability points.</td>
+            <td>All Items</td>
+            <td>Unbreaking</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Curse of Mediocrity</td>
+            <td>Chance to disenchant dropped items from blocks and mobs / players.</td>
+            <td>Tools, Weapons</td>
+            <td>-</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Curse of Misfortune</td>
+            <td>Chance to have no drop/loot from mobs/blocks.</td>
+            <td>Tools, Weapons</td>
+            <td>Fortune, Looting</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Curse of Fragility</td>
+            <td>Prevents item from being grindstoned or anviled.</td>
+            <td>All Items</td>
+            <td>-</td>
+            <td>1</td>
+        </tr>
+    </table>
+</body>
+</html>
