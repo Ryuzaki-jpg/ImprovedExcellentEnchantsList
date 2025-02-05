@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excellent Enchants</title>
@@ -80,6 +79,54 @@
             background-color: var(--header-color);
             transition: background-color 0.3s ease;
         }
+        
+        .rarity-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            min-width: 80px;
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .common {
+            color: #AAAAAA; /* Light gray */
+            border-left: 3px solid #AAAAAA;
+        }
+
+        .rare {
+            color: #55FF55; /* Light green */
+            border-left: 3px solid #55FF55;
+        }
+
+        .legendary {
+            color: #FFFF55; /* Light yellow */
+            border-left: 3px solid #FFFF55;
+        }
+
+        .mythic {
+            color: #FF55FF; /* Light purple */
+            border-left: 3px solid #FF55FF;
+        }
+
+        /* Center align the rarity column */
+        th:nth-child(2),
+        td:nth-child(2) {
+            text-align: center;
+        }
+
+        /* Add subtle hover effect */
+        .rarity-tag:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
 
         @media (max-width: 768px) {
             table {
@@ -109,14 +156,41 @@
             background: #9f7aea;
         }
     </style>
-</head>
+<style>@keyframes loading {
+    0% {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.ag-textarea .MuiInputBase-input::-webkit-scrollbar {
+    height: 6px;
+    width: 6px
+}
+
+.ag-textarea .MuiInputBase-input::-webkit-scrollbar-track {
+    background: transparent
+}
+
+.ag-textarea .MuiInputBase-input::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border-radius: 4px
+}
+
+.ag-textarea .MuiInputBase-input::-webkit-scrollbar-thumb:hover {
+    background: #d4d4d4
+}</style></head>
 <body>
     <h1>💫 Excellent Enchants</h1>
 
     <h2>Armor Enchantments</h2>
     <table>
-        <tr>
+        <tbody><tr>
             <th>Name</th>
+            <th>Rarity</th>
             <th>Description</th>
             <th>Applies To</th>
             <th>Conflicts With</th>
@@ -124,6 +198,7 @@
         </tr>
         <tr>
             <td>Aquaman</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Grants Water Breathing effect.</td>
             <td>Helmet</td>
             <td>-</td>
@@ -131,6 +206,7 @@
         </tr>
         <tr>
             <td>Bunny Hop</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Grants Jump Boost effect.</td>
             <td>Boots</td>
             <td>-</td>
@@ -138,6 +214,7 @@
         </tr>
         <tr>
             <td>Cold Steel</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Applies Mining Fatigue effect to the attacker.</td>
             <td>Chestplate</td>
             <td>-</td>
@@ -145,6 +222,7 @@
         </tr>
         <tr>
             <td>Darkness Cloak</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Applies Darkness effect to the attacker.</td>
             <td>Chestplate</td>
             <td>-</td>
@@ -152,6 +230,7 @@
         </tr>
         <tr>
             <td>Elemental Protection</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Reduces Poison, Magic, Wither, Lightning, Freeze damage.</td>
             <td>All Armor</td>
             <td>-</td>
@@ -159,6 +238,7 @@
         </tr>
         <tr>
             <td>Flame Walker</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Creates magma blocks when walking over lava, and causes the wearer to be immune to damage from magma blocks when stepped on.</td>
             <td>Boots</td>
             <td>Frost Walker</td>
@@ -166,6 +246,7 @@
         </tr>
         <tr>
             <td>Fire Shield</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Like Thorns, but ignites the attacker.</td>
             <td>Chestplate</td>
             <td>-</td>
@@ -173,6 +254,7 @@
         </tr>
         <tr>
             <td>Ice Shield</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Freezes and slows down the attacker.</td>
             <td>Chestplate</td>
             <td>-</td>
@@ -180,6 +262,7 @@
         </tr>
         <tr>
             <td>Hardened</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Grants Damage Resistance effect on receiving damage.</td>
             <td>Chestplate</td>
             <td>-</td>
@@ -187,6 +270,7 @@
         </tr>
         <tr>
             <td>Night Vision</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Grants Night Vision effect.</td>
             <td>Helmet</td>
             <td>-</td>
@@ -194,6 +278,7 @@
         </tr>
         <tr>
             <td>Rebound</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Gives the effect of landing on a slime block.</td>
             <td>Boots</td>
             <td>Feather Falling</td>
@@ -201,6 +286,7 @@
         </tr>
         <tr>
             <td>Regrowth</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Restores certain amount hearts over the time regardless of the food and saturation levels.</td>
             <td>Chestplate</td>
             <td>-</td>
@@ -208,6 +294,7 @@
         </tr>
         <tr>
             <td>Saturation</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Restores certain amount of food and saturation over the time.</td>
             <td>Helmet</td>
             <td>-</td>
@@ -215,6 +302,7 @@
         </tr>
         <tr>
             <td>Self-Destruction</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Creates an explosion on death.</td>
             <td>Chestplate</td>
             <td>-</td>
@@ -222,6 +310,7 @@
         </tr>
         <tr>
             <td>Sonic</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Grants Speed effect.</td>
             <td>Boots</td>
             <td>-</td>
@@ -229,6 +318,7 @@
         </tr>
         <tr>
             <td>Stopping Force</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Reduces knockback when getting damage.</td>
             <td>Leggings</td>
             <td>-</td>
@@ -236,17 +326,19 @@
         </tr>
         <tr>
             <td>Treasure Hunter</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to find more loot in loot chests of dungeons and structures.</td>
             <td>Helmet</td>
             <td>-</td>
             <td>4</td>
         </tr>
-    </table>
+    </tbody></table>
 
     <h2>Bow Enchantments</h2>
     <table>
-        <tr>
+        <tbody><tr>
             <th>Name</th>
+            <th>Rarity</th>
             <th>Description</th>
             <th>Applies To</th>
             <th>Conflicts With</th>
@@ -254,6 +346,7 @@
         </tr>
         <tr>
             <td>Bomber</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to launch TNT instead of an Arrow.</td>
             <td>Bows, Crossbows</td>
             <td>Power, Punch, Flame, Flare, Ender Bow, Ghast, (Arrow Effect Enchants)</td>
@@ -261,6 +354,7 @@
         </tr>
         <tr>
             <td>Ender Bow</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Chance to launch an Ender Pearl instead of an Arrow.</td>
             <td>Bows, Crossbows</td>
             <td>Ghast, Bomber, Flare</td>
@@ -268,6 +362,7 @@
         </tr>
         <tr>
             <td>Ghast</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to launch a Fireball instead of an Arrow.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Bomber, Flare</td>
@@ -275,6 +370,7 @@
         </tr>
         <tr>
             <td>Flare</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to create a torch where arrow land.</td>
             <td>Bows, Crossbows</td>
             <td>-</td>
@@ -282,6 +378,7 @@
         </tr>
         <tr>
             <td>Sniper</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Increases projectile speed.</td>
             <td>Bows, Crossbows</td>
             <td>-</td>
@@ -289,6 +386,7 @@
         </tr>
         <tr>
             <td>Hover</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to launch an arrow with Levitation effect on hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -296,6 +394,7 @@
         </tr>
         <tr>
             <td>Lingering</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Makes tipped arrows generate a lingering effect when the arrow hits a block.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -303,6 +402,7 @@
         </tr>
         <tr>
             <td>Confusing Arrows</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to launch an arrow with Nausea effect on hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -310,6 +410,7 @@
         </tr>
         <tr>
             <td>Dragonfire Arrows</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to launch an arrow with Dragon Breath effect on hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -317,6 +418,7 @@
         </tr>
         <tr>
             <td>Darkness Arrows</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to launch an arrow with Darkness effect on hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -324,6 +426,7 @@
         </tr>
         <tr>
             <td>Electrified Arrows</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to launch an arrow with Lightning effect on hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -331,6 +434,7 @@
         </tr>
         <tr>
             <td>Explosive Arrows</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to launch an arrow with Explosion effect on hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -338,6 +442,7 @@
         </tr>
         <tr>
             <td>Poisoned Arrows</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to launch an arrow with Poison effect on hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -345,6 +450,7 @@
         </tr>
         <tr>
             <td>Vampiric Arrows</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to restore health on arrow hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
@@ -352,17 +458,19 @@
         </tr>
         <tr>
             <td>Withered Arrows</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to launch an arrow with Wither effect on hit.</td>
             <td>Bows, Crossbows</td>
             <td>Ender Bow, Ghast, Bomber</td>
             <td>3</td>
         </tr>
-    </table>
+    </tbody></table>
 
     <h2>Tool Enchantments</h2>
     <table>
-        <tr>
+        <tbody><tr>
             <th>Name</th>
+            <th>Rarity</th>
             <th>Description</th>
             <th>Applies To</th>
             <th>Conflicts With</th>
@@ -370,6 +478,7 @@
         </tr>
         <tr>
             <td>Blast Mining</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to create an explosion that mines all blocks in it's area.</td>
             <td>Pickaxes</td>
             <td>Tunnel, Veinminer</td>
@@ -377,6 +486,7 @@
         </tr>
         <tr>
             <td>Divine Touch</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Chance to mine a Spawner with it's Entity Type.</td>
             <td>Pickaxes</td>
             <td>Smelter</td>
@@ -384,6 +494,7 @@
         </tr>
         <tr>
             <td>Haste</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to receive Haste effect on block break.</td>
             <td>Tools</td>
             <td>-</td>
@@ -391,6 +502,7 @@
         </tr>
         <tr>
             <td>Lucky Miner</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to receive more exp from mined blocks.</td>
             <td>Pickaxes</td>
             <td>-</td>
@@ -398,6 +510,7 @@
         </tr>
         <tr>
             <td>Replanter</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Automatically replant crops on harvest or right-click.</td>
             <td>Hoes</td>
             <td>-</td>
@@ -405,6 +518,7 @@
         </tr>
         <tr>
             <td>Silk Chest</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Chance to save all chest's content in the dropped item on break.</td>
             <td>Axes</td>
             <td>-</td>
@@ -412,6 +526,7 @@
         </tr>
         <tr>
             <td>Smelter</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to smelt dropped items into other materials.</td>
             <td>Tools</td>
             <td>Silk Touch, Divine Touch</td>
@@ -419,6 +534,7 @@
         </tr>
         <tr>
             <td>Telekinesis</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Chance to move all block loot directly to your inventory.</td>
             <td>Tools</td>
             <td>-</td>
@@ -426,6 +542,7 @@
         </tr>
         <tr>
             <td>Tunnel</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Chance to mine 1x2 area on level I, 2x2 on level II, 3x3 on level III.</td>
             <td>Pickaxes, Shovels</td>
             <td>Veinminer, Blast Mining</td>
@@ -433,17 +550,19 @@
         </tr>
         <tr>
             <td>Veinminer</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to mine the whole ore vein at once.</td>
             <td>Pickaxes</td>
             <td>Tunnel, Blast Mining</td>
             <td>3</td>
         </tr>
-    </table>
+    </tbody></table>
 
     <h2>Fishing Enchantments</h2>
     <table>
-        <tr>
+        <tbody><tr>
             <th>Name</th>
+            <th>Rarity</th>
             <th>Description</th>
             <th>Applies To</th>
             <th>Conflicts With</th>
@@ -451,6 +570,7 @@
         </tr>
         <tr>
             <td>Auto Reel</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Automatically reels in a hook on bite.</td>
             <td>Fishing Rod</td>
             <td>-</td>
@@ -458,6 +578,7 @@
         </tr>
         <tr>
             <td>Double Catch</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Increases amount of caught item by x2.</td>
             <td>Fishing Rod</td>
             <td>-</td>
@@ -465,6 +586,7 @@
         </tr>
         <tr>
             <td>Seasoned Angler</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Increases amount of gained XP from fishing.</td>
             <td>Fishing Rod</td>
             <td>-</td>
@@ -472,6 +594,7 @@
         </tr>
         <tr>
             <td>Survivalist</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Automatically cooks fish if what is caught is raw.</td>
             <td>Fishing Rod</td>
             <td>-</td>
@@ -479,6 +602,7 @@
         </tr>
         <tr>
             <td>River Master</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Increases casting distance.</td>
             <td>Fishing Rod</td>
             <td>-</td>
@@ -486,17 +610,19 @@
         </tr>
         <tr>
             <td>Curse of Drowned</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to fish up a Drowned Zombie.</td>
             <td>Fishing Rod</td>
             <td>-</td>
             <td>5</td>
         </tr>
-    </table>
+    </tbody></table>
 
     <h2>Weapon Enchantments</h2>
     <table>
-        <tr>
+        <tbody><tr>
             <th>Name</th>
+            <th>Rarity</th>
             <th>Description</th>
             <th>Applies To</th>
             <th>Conflicts With</th>
@@ -504,6 +630,7 @@
         </tr>
         <tr>
             <td>Bane of Netherspawn</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to inflict additional damage to nether mobs.</td>
             <td>Swords, Axes</td>
             <td>Sharpness, Bane of Arthropods, Smite, Village Defender</td>
@@ -511,6 +638,7 @@
         </tr>
         <tr>
             <td>Blindness</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to apply Blindness effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -518,6 +646,7 @@
         </tr>
         <tr>
             <td>Confusion</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to apply Nausea effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -525,6 +654,7 @@
         </tr>
         <tr>
             <td>Cure</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to cure Zombified Piglins and Zombie Villagers on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -532,6 +662,7 @@
         </tr>
         <tr>
             <td>Curse of Death</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>If you kill a player, you have a chance of dying too.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -539,6 +670,7 @@
         </tr>
         <tr>
             <td>Cutter</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to reduce durability and unequip enemy's armor on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -546,6 +678,7 @@
         </tr>
         <tr>
             <td>Decapitator</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to drop enemy's head on kill.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -553,6 +686,7 @@
         </tr>
         <tr>
             <td>Double Strike</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Chance to inflict double damage.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -560,6 +694,7 @@
         </tr>
         <tr>
             <td>Exhaust</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to apply Hunger effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -567,6 +702,7 @@
         </tr>
         <tr>
             <td>Exp Hunter</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to receive more exp from mobs on kill.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -574,6 +710,7 @@
         </tr>
         <tr>
             <td>Ice Aspect</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to apply Slowness effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -581,6 +718,7 @@
         </tr>
         <tr>
             <td>Infernus</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to launch a flaming Trident.</td>
             <td>Tridents</td>
             <td>-</td>
@@ -588,6 +726,7 @@
         </tr>
         <tr>
             <td>Nimble</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to move all mob loot directly to your inventory on kill.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -595,6 +734,7 @@
         </tr>
         <tr>
             <td>Paralyze</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to apply Mining Fatigue effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -602,6 +742,7 @@
         </tr>
         <tr>
             <td>Rage</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to receive Strength effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -609,6 +750,7 @@
         </tr>
         <tr>
             <td>Rocket</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to launch an enemy into the space on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -616,6 +758,7 @@
         </tr>
         <tr>
             <td>Scavenger</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to get extra loot from mobs.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -623,6 +766,7 @@
         </tr>
         <tr>
             <td>Surprise</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to apply Random effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -630,6 +774,7 @@
         </tr>
         <tr>
             <td>Swiper</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to steal player's XP on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -637,6 +782,7 @@
         </tr>
         <tr>
             <td>Temper</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Chance to inflict more damage depends on how many hearts you lost.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -644,6 +790,7 @@
         </tr>
         <tr>
             <td>Thrifty</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to receive mob Spawn Egg on kill.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -651,6 +798,7 @@
         </tr>
         <tr>
             <td>Thunder</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to summon Lightning strike on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -658,6 +806,7 @@
         </tr>
         <tr>
             <td>Vampire</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>Chance to regain health on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -665,6 +814,7 @@
         </tr>
         <tr>
             <td>Venom</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to apply Poison effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
@@ -672,6 +822,7 @@
         </tr>
         <tr>
             <td>Village Defender</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to inflict more damage to Pillagers.</td>
             <td>Swords, Axes</td>
             <td>Sharpness, Smite, Bane of Arthropods, Bane of Netherspawn</td>
@@ -679,17 +830,19 @@
         </tr>
         <tr>
             <td>Wither</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to apply Wither effect on hit.</td>
             <td>Swords, Axes</td>
             <td>-</td>
             <td>3</td>
         </tr>
-    </table>
+    </tbody></table>
 
     <h2>Universal Enchantments</h2>
     <table>
-        <tr>
+        <tbody><tr>
             <th>Name</th>
+            <th>Rarity</th>
             <th>Description</th>
             <th>Applies To</th>
             <th>Conflicts With</th>
@@ -697,6 +850,7 @@
         </tr>
         <tr>
             <td>Restore</td>
+            <td><span class="rarity-tag legendary">Legendary</span></td>
             <td>When an item breaks it loses the enchant and the item is brought back to certain durability.</td>
             <td>All Items</td>
             <td>-</td>
@@ -704,6 +858,7 @@
         </tr>
         <tr>
             <td>Soulbound</td>
+            <td><span class="rarity-tag mythic">Mythic</span></td>
             <td>Prevents item from being dropped upon death.</td>
             <td>All Items</td>
             <td>Curse of Vanishing</td>
@@ -711,6 +866,7 @@
         </tr>
         <tr>
             <td>Curse of Breaking</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Chance to take extra item durability points.</td>
             <td>All Items</td>
             <td>Unbreaking</td>
@@ -718,6 +874,7 @@
         </tr>
         <tr>
             <td>Curse of Mediocrity</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to disenchant dropped items from blocks and mobs / players.</td>
             <td>Tools, Weapons</td>
             <td>-</td>
@@ -725,6 +882,7 @@
         </tr>
         <tr>
             <td>Curse of Misfortune</td>
+            <td><span class="rarity-tag rare">Rare</span></td>
             <td>Chance to have no drop/loot from mobs/blocks.</td>
             <td>Tools, Weapons</td>
             <td>Fortune, Looting</td>
@@ -732,11 +890,27 @@
         </tr>
         <tr>
             <td>Curse of Fragility</td>
+            <td><span class="rarity-tag common">Common</span></td>
             <td>Prevents item from being grindstoned or anviled.</td>
             <td>All Items</td>
             <td>-</td>
             <td>1</td>
         </tr>
-    </table>
-</body>
-</html>
+    </tbody></table>
+
+
+<div id="volume-booster-visusalizer">
+                <div class="sound">
+                    <div class="sound-icon"></div>
+                    <div class="sound-wave sound-wave_one"></div>
+                    <div class="sound-wave sound-wave_two"></div>
+                    <div class="sound-wave sound-wave_three"></div>
+                </div>
+                <div class="segments-box">
+                    <div data-range="1-20" class="segment"><span></span></div>
+                    <div data-range="21-40" class="segment"><span></span></div>
+                    <div data-range="41-60" class="segment"><span></span></div>
+                    <div data-range="61-80" class="segment"><span></span></div>
+                    <div data-range="81-100" class="segment"><span></span></div>
+                </div>
+            </div><scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible; visibility: visible;"></scribe-shadow><div id="veepn-breach-alert"></div><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2-variations");font-weight:100 1000;font-display:swap}</style><div id="veepn-guard-alert"></div><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2-variations");font-weight:100 1000;font-display:swap}</style><script src="chrome-extension://lopnbnfpjmgpbppclhclehhgafnifija/aiscripts/script-main.js"></script></body></html>
